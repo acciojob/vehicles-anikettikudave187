@@ -9,29 +9,32 @@ public class Car extends Vehicle {
     private int currentGear;
     private int seats;
 
+    // Constructor to initialize Car attributes
     public Car(String name, int wheels, int doors, int gears, boolean isManual, String type, int seats) {
-        //Hint: Car extends Vehicle
         super(name);
-        this.wheels=wheels;
-        this.doors=doors;
-        this.gears=gears;
-        this.isManual=isManual;
-        this.type=type;
-        this.seats=seats;
-        this.currentGear=1;
+        this.wheels = wheels;
+        this.doors = doors;
+        this.gears = gears;
+        this.isManual = isManual;
+        this.type = type;
+        this.seats = seats;
+        this.currentGear = 1;  // Default gear is 1
     }
 
-
-    public void changeGear(int newGear){
-
+    // Method to change the gear
+    public void changeGear(int newGear) {
+        this.currentGear = newGear;
         System.out.println("changeGear method called - The gear is changed to: " + currentGear);
     }
 
-    public void changeSpeed(int newSpeed, int newDirection){
-
+    // Method to change speed and direction (similar to Vehicle class)
+    public void changeSpeed(int newSpeed, int newDirection) {
+        this.setCurrentSpeed(newSpeed);
+        this.setCurrentDirection(newDirection);
         System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
     }
 
+    // Getters and setters for Car specific attributes
     public int getCurrentGear() {
         return currentGear;
     }
@@ -76,8 +79,8 @@ public class Car extends Vehicle {
         return isManual;
     }
 
-    public void setManual(boolean manual) {
-        isManual = manual;
+    public void setManual(boolean isManual) {
+        this.isManual = isManual;
     }
 
     public int getSeats() {

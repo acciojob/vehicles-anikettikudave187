@@ -1,14 +1,16 @@
 package com.driver;
 
-public class Boat implements WaterVehicle{
-    String name;
-    int capacity;
+public class Boat implements WaterVehicle {
+    private String name;
+    private int capacity;
 
-    public Boat(String name,int capacity){
-        this.name=name;
-        this.capacity=capacity;
+    // Constructor to initialize Boat attributes
+    public Boat(String name, int capacity) {
+        this.name = name;
+        this.capacity = capacity;
     }
 
+    // Implementing methods from WaterVehicle interface
     @Override
     public String getVehicleName() {
         return name;
@@ -19,6 +21,7 @@ public class Boat implements WaterVehicle{
         return capacity;
     }
 
+    // Getters and Setters for Boat attributes
     public String getName() {
         return name;
     }

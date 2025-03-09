@@ -6,26 +6,33 @@ public class Vehicle {
     private int currentSpeed;
     private int currentDirection;
 
+    // Constructor to initialize name
     public Vehicle(String name) {
-        this.name=name;
+        this.name = name;
+        this.currentSpeed = 0;  // Default speed is 0
+        this.currentDirection = 0;  // Default direction is 0 (facing north)
     }
 
-
-    public void steer(int direction){
-        //direction is in degrees, add it to the current direction
+    // Method to change the direction (steer)
+    public void steer(int direction) {
+        this.currentDirection += direction;
         System.out.println("steer method called - The direction is changed to: " + currentDirection + " degrees");
     }
 
-    public void move(int speed, int direction){
-        //set the values of currentSpeed and currentDirection
+    // Method to change speed and direction (move)
+    public void move(int speed, int direction) {
+        this.currentSpeed = speed;
+        this.currentDirection = direction;
         System.out.println("move method called - The speed is changed to: " + currentSpeed + ", and the direction is changed to: " + currentDirection + " degrees");
     }
 
-    public void stop(){
-
+    // Method to stop the vehicle
+    public void stop() {
+        this.currentSpeed = 0;
         System.out.println("stop method called - The vehicle is stopped");
     }
 
+    // Getters and setters
     public String getName() {
         return name;
     }
@@ -49,5 +56,4 @@ public class Vehicle {
     public void setCurrentDirection(int currentDirection) {
         this.currentDirection = currentDirection;
     }
-
 }
