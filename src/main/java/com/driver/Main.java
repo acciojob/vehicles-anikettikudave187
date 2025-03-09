@@ -24,4 +24,5 @@ public class Main {
         System.out.println("Boat Name: " + boat.getVehicleName());
         System.out.println("Boat Capacity: " + boat.getVehicleCapacity());
     }
+
 }
